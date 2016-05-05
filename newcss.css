@@ -38,7 +38,7 @@ body {
 .logo {
   font-family: "Montserrat Bold", arial;
   font-size: 1.3em;
-  margin: 0px 20px; }
+  margin-right: 20px; }
 
 .org {
   border-bottom: 1px solid #a2a2a2;
@@ -240,25 +240,62 @@ body {
   background-color: #1f1f1f;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box; }
-  .header .logo {
-    display: inline-block; }
-  .header .main-menu {
-    display: inline-block; }
-  .header .user {
-    display: inline-block; }
+  box-sizing: border-box;
+  padding: 8px 20px; }
+  .header .flex-item {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+
+.flex-header {
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-flex-wrap: nowrap;
+  -moz-flex-wrap: nowrap;
+  flex-wrap: nowrap; }
+  @media (max-width: 1200px) {
+    .flex-header {
+      -webkit-flex-wrap: wrap;
+      -moz-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-justify-content: space-between;
+      -moz-justify-content: space-between;
+      -ms-justify-content: space-between;
+      justify-content: space-between; } }
+
+.flex-logo {
+  width: auto; }
+
+.flex-menu {
+  width: 100%; }
+  @media (max-width: 1200px) {
+    .flex-menu {
+      order: 1; } }
+
+.flex-user {
+  width: auto; }
 
 .main-menu ul {
-  margin: 0px -6px;
+  padding: 0px -20px;
   padding: 0px; }
-  .main-menu ul a {
-    margin: 0px 6px; }
-    .main-menu ul a li {
-      display: inline-block;
-      color: #B5B5B5;
-      padding: 16px 0px;
-      font-size: 1.1em; }
-      .main-menu ul a li:hover {
-        color: #fff; }
+  .main-menu ul a li {
+    display: inline-block;
+    color: #B5B5B5;
+    font-size: 1.1em; }
+    .main-menu ul a li:hover {
+      color: #fff; }
+
+.user {
+  font-size: 0.85em; }
+  .user .button {
+    margin: 5px; }
+  .user .login {
+    margin: 0px 5px 0px 10px; }
+  .user .link {
+    color: #fff; }
 
 /*# sourceMappingURL=newcss.css.map */
