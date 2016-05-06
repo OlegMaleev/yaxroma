@@ -11,6 +11,9 @@ body {
   background-color: #333;
   color: #fff;
   font-family: "Open sans light", sans-serif; }
+  @media (max-width: 650px) {
+    body {
+      font-size: 0.95em; } }
 
 .button {
   display: inline-block;
@@ -146,7 +149,7 @@ body {
   padding: 0px 20px;
   margin: 10px; }
 
-.content-header {
+.content-header, .window-header {
   font-size: 1.3em;
   color: #a2a2a2;
   border-bottom: 1px solid #a2a2a2;
@@ -205,17 +208,18 @@ body {
   color: #fff; }
   .form textarea {
     width: 100%;
-    background-color: transparent;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
     resize: vertical;
     height: 100px; }
-  .form input {
+  .form input, .form input[type="text"], .form textarea {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     background-color: transparent; }
+    .form input:focus, .form input[type="text"]:focus, .form textarea:focus {
+      outline: none; }
+  .form input[type="text"] {
+    border: none;
+    border-bottom: 1px solid #b9b8b8; }
 
 .review-like-or-dislike {
   display: inline-block;
@@ -266,6 +270,12 @@ body {
       -moz-justify-content: space-between;
       -ms-justify-content: space-between;
       justify-content: space-between; } }
+  @media (max-width: 650px) {
+    .flex-header {
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
+      -ms-justify-content: center;
+      justify-content: center; } }
 
 .flex-logo {
   width: auto; }
@@ -297,5 +307,34 @@ body {
     margin: 0px 5px 0px 10px; }
   .user .link {
     color: #fff; }
+
+.window-login {
+  margin: 0 auto;
+  background-color: #1f1f1f;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0px 20px;
+  margin: 10px;
+  max-width: 500px; }
+  .window-login .message {
+    margin: 9px 0px; }
+  .window-login .window-submit {
+    text-align: right; }
+    .window-login .window-submit .button {
+      font-size: .9em;
+      margin: 0px 0px 10px 0px; }
+  .window-login .window-input {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px; }
+    .window-login .window-input p {
+      color: #a2a2a2;
+      margin: 0px 0px 4px 0px;
+      font-size: 0.8em; }
+    .window-login .window-input input {
+      width: 100%;
+      font-size: 1.5em;
+      padding: 0px 10px 5px 10px; }
 
 /*# sourceMappingURL=newcss.css.map */

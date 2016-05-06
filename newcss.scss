@@ -115,6 +115,9 @@
 $mainFont: "Open sans light", sans-serif;
 $logoFont: 'Montserrat Bold', arial;
 
+//colors
+$color-block: #1f1f1f;
+
 @keyframes slow-attenuation {
   from {
     background-color: #00b398;
@@ -131,6 +134,9 @@ body {
     background-color: #333;
     color: #fff;
     font-family: $mainFont;
+    @media(max-width:650px){
+        font-size: 0.95em;
+    }
 }
 .button {
     display: inline-block;
@@ -243,7 +249,7 @@ body {
     padding: 0px 20px;
     margin: 10px;
 }
-.content-header {
+.content-header, .window-header {
     font-size: 1.3em;
     color: #a2a2a2;
     border-bottom: 1px solid #a2a2a2;
@@ -301,14 +307,19 @@ body {
     color: #fff;
     textarea{
         width: 100%;
-        background-color: transparent;
-        @include box-sizing(border-box);
         resize: vertical;
         height: 100px;
     }
-    input{
+    input, input[type="text"], textarea{
         @include box-sizing(border-box);
         background-color: transparent;
+        &:focus{
+            outline: none;
+        }
+    }
+    input[type="text"]{
+        border: none;
+        border-bottom: 1px solid #b9b8b8;
     }
 }
 .review-like-or-dislike {
@@ -350,6 +361,9 @@ body {
     @media(max-width:1200px){
         @include flex-wrap(wrap);
         @include justify-content(space-between);
+    }
+    @media(max-width:650px){
+        @include justify-content(center);
     }
 }
 
@@ -393,5 +407,38 @@ body {
     }
     .link{
         color: #fff;
+    }
+}
+.window-login{
+    margin: 0 auto;
+    background-color: $color-block;
+    @include box-sizing(border-box);
+    padding: 0px 20px;
+    margin: 10px;
+    max-width: 500px;
+    .message{
+        margin: 9px 0px;
+    }
+    .window-submit {
+        text-align: right;
+        .button {
+            font-size: .9em;
+            margin: 0px 0px 10px 0px;
+        }
+    }
+    .window-input {
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+        p {
+            color: #a2a2a2;
+            margin: 0px 0px 4px 0px;
+            font-size: 0.8em;
+        }
+        input{
+            width: 100%;
+            font-size: 1.5em;
+            padding: 0px 10px 5px 10px;
+        }
     }
 }
