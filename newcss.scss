@@ -129,6 +129,7 @@ $color-block: #1f1f1f;
 }
 a{
     color: inherit;
+    text-decoration: none;
 }
 body {
     background-color: #333;
@@ -155,7 +156,7 @@ body {
 }
 .logo {
     font-family: $logoFont;
-    font-size: 1.3em;
+    font-size: 1.2em;
     margin-right: 20px;
 }
 .org {
@@ -205,20 +206,6 @@ body {
 .action {
     font-size: 0.8em;
 }
-@media(max-width:650px){
-    .action{
-        display: block;
-        text-align: center;
-        margin-bottom: 10px;
-        width: 100%;
-        @include box-sizing(border-box);
-    }
-    .content-footer{
-        .button{
-            display: block;
-        }
-    }
-}
 .flex-container{
     @include flexbox;
     @include justify-content(center);
@@ -253,7 +240,7 @@ body {
     font-size: 1.3em;
     color: #a2a2a2;
     border-bottom: 1px solid #a2a2a2;
-    padding: 10px 0px 10px 0px;
+    padding: 15px 0px 15px 0px;
 }
 .content-message {
     font-size: 1.2em;
@@ -347,7 +334,7 @@ body {
 .header {
     background-color: #1f1f1f;
     @include box-sizing(border-box);
-    padding: 8px 20px;
+    padding: 0px 20px;
     .flex-item {
         //border: dotted 2px aquamarine;
         @include box-sizing(border-box);
@@ -363,10 +350,14 @@ body {
         @include justify-content(space-between);
     }
     @media(max-width:650px){
-        @include justify-content(center);
+        &{
+            @include justify-content(center);
+        }
+        .flex-logo{
+            padding: 10px 0px;
+        }
     }
 }
-
 .flex-logo {
     width: auto;
 }
@@ -379,7 +370,6 @@ body {
 .flex-user {
     width: auto;
 }
-
 //menu
 .main-menu{
     ul{
@@ -389,7 +379,8 @@ body {
             li{
                 display: inline-block;
                 color: #B5B5B5;
-                font-size: 1.1em;
+                margin: 0 8px;
+                font-size: 1em;
                 &:hover{
                     color: #fff;
                 }
@@ -440,5 +431,23 @@ body {
             font-size: 1.5em;
             padding: 0px 10px 5px 10px;
         }
+    }
+}
+@media(max-width:650px){
+    .action{
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+        width: 100%;
+        @include box-sizing(border-box);
+    }
+    .content-footer{
+        .button{
+            display: block;
+        }
+    }
+    .content{
+        margin: 4px;
+        padding: 0px 10px;
     }
 }
