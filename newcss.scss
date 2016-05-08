@@ -159,13 +159,13 @@ body {
     font-size: 1.2em;
     margin-right: 20px;
 }
-.org {
+.org, .comment {
     border-bottom: 1px solid #a2a2a2;
     padding: 20px 0px;
-}
-.comment {
-    border-bottom: 1px solid #a2a2a2;
-    padding: 20px 0px;
+    margin-bottom: 10px;
+    &:last-child{
+        border-bottom:none;
+    }
 }
 .org-name {
     font-size: 1.2em;
@@ -188,6 +188,13 @@ body {
     &>div {
         display: inline-block;
         margin: 0px 5px;
+    }
+}
+.org-data{
+    p{
+        margin: 5px 0px;
+        font-size: 0.9em;
+        color: #B4B4B4;
     }
 }
 .actions {
@@ -325,6 +332,9 @@ body {
 }
 .review-submit {
     vertical-align: middle;
+}
+.review-form{
+    padding-bottom: 10px;
 }
 .input-name {
     color: #C3C3C3;
